@@ -1,7 +1,7 @@
 
 Senha= input("Informe a senha: ")
 alfabeto_junto = list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-Numero=['123456789']
+Numero=['0','1','2','3','4','5','6','7','8','9']
 caracteres=['!@#$%^&*()_+-=[]{}|;:",./<>?']
 Senhafatiada=[]
 
