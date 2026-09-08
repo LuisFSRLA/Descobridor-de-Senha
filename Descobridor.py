@@ -1,45 +1,45 @@
 
-Senha= input("Informe a senha: ")
-alfabeto_junto = list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
-Numero=['0','1','2','3','4','5','6','7','8','9']
-caracteres=['!@#$%^&*()_+-=[]{}|;:",./<>?']
-Senhafatiada=[]
+senha = input("Informe a senha: ")
+alfabeto = list("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ")
+numeros = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+caracteres_especiais = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '-', '=', '[', ']', '{', '}', '|', ';', ':', '', '"', ',', '.', '/', '<', '>', '?']
+senha_fatiada = []
 
-for elements in Senha:
-     if elements == str:
-           elements.lower()
-     Senhafatiada.append(elements)
-Tentativa=0
-TentativaDeSenha=[]
-for elements in Senha:
-    if elements in alfabeto_junto:    
-        for x in range(len(alfabeto_junto)):
-            if elements not in alfabeto_junto:
+for elemento in senha:
+     if elemento == str:
+           elemento.lower()
+     senha_fatiada.append(elemento)
+tentativas = 0
+tentativa_de_senha = []
+for elemento in senha:
+    if elemento in alfabeto:
+        for indice in range(len(alfabeto)):
+            if elemento not in alfabeto:
                     break
-            elif elements==alfabeto_junto[x]:
-                TentativaDeSenha.append(alfabeto_junto[x])
-                print(TentativaDeSenha)
-            Tentativa +=1
-    elif elements in caracteres:    
-            for z in range(len(caracteres)):
-                if elements not in caracteres:
+            elif elemento == alfabeto[indice]:
+                tentativa_de_senha.append(alfabeto[indice])
+                print(tentativa_de_senha)
+            tentativas += 1
+    elif elemento in caracteres_especiais:
+            for indice in range(len(caracteres_especiais)):
+                if elemento not in caracteres_especiais:
                         break
-                elif elements==caracteres[z]:
-                    TentativaDeSenha.append(caracteres[z])
-                    print(TentativaDeSenha)
-                Tentativa +=1
-    elif elements in Numero:
-        for y in range(len(Numero)):
-            if elements not in Numero:
+                elif elemento == caracteres_especiais[indice]:
+                    tentativa_de_senha.append(caracteres_especiais[indice])
+                    print(tentativa_de_senha)
+                tentativas += 1
+    elif elemento in numeros:
+        for indice in range(len(numeros)):
+            if elemento not in numeros:
                  break
-            elif elements==Numero[y]:
-                        TentativaDeSenha.append(Numero[y])
-                        print(TentativaDeSenha)
-            Tentativa +=1
+            elif elemento == numeros[indice]:
+                        tentativa_de_senha.append(numeros[indice])
+                        print(tentativa_de_senha)
+            tentativas += 1
     
         
 
     
-print(f"Demorou {Tentativa} Tentativas")
-print(f"Senha fatiada: {Senhafatiada} ")
-print(f"Senha Achada: {TentativaDeSenha} ")
+print(f"Demorou {tentativas} Tentativas")
+print(f"Senha fatiada: {senha_fatiada} ")
+print(f"Senha Achada: {tentativa_de_senha} ")
